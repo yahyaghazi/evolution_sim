@@ -32,12 +32,13 @@ class Evolution:
         # Taille du tournoi (nombre de créatures à comparer)
         tournament_size = max(2, int(len(population.creatures) * 0.1))
         
-        # Sélection du premier parent
+        # Sélection du premier parent - utiliser toList() pour convertir en liste Python
         candidates1 = np.random.choice(
             population.creatures, 
-            size=tournament_size, 
+            size=min(tournament_size, len(population.creatures)), 
             replace=False
-        )
+        ).tolist()
+        
         parent1 = self._select_fittest(candidates1)
         
         # Sélection du second parent (différent du premier)
@@ -49,7 +50,8 @@ class Evolution:
             remaining,
             size=min(tournament_size, len(remaining)),
             replace=False
-        )
+        ).tolist()
+        
         parent2 = self._select_fittest(candidates2)
         
         return parent1, parent2
@@ -59,7 +61,8 @@ class Evolution:
         Sélectionne la créature la plus adaptée parmi les candidats,
         en tenant compte de la pression de sélection.
         """
-        if not candidates:
+        # Vérifier si la liste des candidats est vide en utilisant len()
+        if len(candidates) == 0:
             return None
         
         # Calculer le fitness de chaque candidat
@@ -71,13 +74,21 @@ class Evolution:
         
         # Appliquer la pression de sélection
         selection_probs = np.array(fitness_scores) ** self.selection_pressure
-        selection_probs = selection_probs / np.sum(selection_probs)  # Normaliser
+        sum_probs = np.sum(selection_probs)
         
-        # Sélection probabiliste basée sur le fitness
+        # Éviter la division par zéro
+        if sum_probs <= 0:
+            # Si toutes les probabilités sont nulles, sélectionner aléatoirement
+            return np.random.choice(candidates)
+        
+        # Normaliser les probabilités
+        selection_probs = selection_probs / sum_probs
+        
         try:
+            # Sélection probabiliste basée sur le fitness
             selected_index = np.random.choice(len(candidates), p=selection_probs)
             return candidates[selected_index]
-        except:
+        except ValueError:
             # Fallback en cas d'erreur (probas invalides, etc.)
             return np.random.choice(candidates)
     

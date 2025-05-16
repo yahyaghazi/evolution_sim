@@ -1,7 +1,7 @@
 import pygame
 import sys
 from world.grid import Grid
-from simulation.population import Population  # Correction: changement de creatures.population à simulation.population
+from simulation.population import Population
 from ui.renderer import Renderer
 from ui.controls import Controls
 from engine.event_handler import EventHandler

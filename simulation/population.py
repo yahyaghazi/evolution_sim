@@ -2,6 +2,7 @@ import numpy as np
 from creatures.evolution import Evolution
 from config import Config
 from simulation.statistics import Statistics
+from creatures.creature import Creature
 
 class Population:
     """
@@ -14,15 +15,21 @@ class Population:
         self.dead_creatures = []  # Historique des créatures mortes
         self.generation = 1       # Compteur de génération
         
+        # Importation du système d'évolution
+        from creatures.evolution import Evolution
+        
         # Initialisation du système d'évolution
         self.evolution = Evolution(grid)
+        
+        # Importation des statistiques
+        from simulation.statistics import Statistics
         
         # Statistiques de population
         self.statistics = Statistics()
         
         # Initialisation de la population de départ
         self.initialize_population()
-    
+
     def initialize_population(self):
         """Crée la population initiale de créatures."""
         # Cette méthode sera implémentée avec vos classes existantes
@@ -44,7 +51,7 @@ class Population:
         
         # Enregistrement des statistiques initiales
         self.statistics.update_population_stats(self.generation, self)
-    
+            
     def update(self):
         """Met à jour toutes les créatures et gère les interactions."""
         # Liste des créatures à supprimer
