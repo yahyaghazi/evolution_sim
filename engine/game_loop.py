@@ -1,10 +1,10 @@
 import pygame
 import sys
 from world.grid import Grid
-from creatures.population import Population
+from simulation.population import Population  # Correction: changement de creatures.population à simulation.population
 from ui.renderer import Renderer
 from ui.controls import Controls
-from event_handler import EventHandler
+from engine.event_handler import EventHandler
 from config import Config
 
 class GameLoop:
