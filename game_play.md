@@ -1,36 +1,34 @@
-Je vais vous expliquer le fonctionnement de cette simulation d'évolution. Il s'agit d'un projet complet qui simule l'évolution de créatures dans un environnement dynamique.
-
-## Vue d'ensemble
+# Vue d'ensemble
 
 Cette simulation modélise un écosystème où des créatures autonomes évoluent dans un monde en grille 2D. Chaque créature possède un génome qui définit ses traits et capacités. Les créatures interagissent avec leur environnement et entre elles, et évoluent au fil des générations grâce à des mécanismes de sélection naturelle, de reproduction et de mutation.
 
-## Composants principaux
+# Composants principaux
 
-### Le monde (World)
+## Le monde (World)
 - Une grille 2D divisée en cellules
 - Chaque cellule a un type de terrain (eau, désert, forêt, montagne)
 - Les cellules possèdent des propriétés environnementales (température, humidité)
 - Des ressources (nourriture, eau) sont disponibles dans les cellules
 
-### Les créatures
+## Les créatures
 - Possèdent un génome qui définit leurs caractéristiques
 - Se déplacent dans le monde à la recherche de nourriture
 - Dépensent de l'énergie pour se déplacer et survivre
 - Peuvent se reproduire si elles ont suffisamment d'énergie
 - Meurent si leur énergie tombe à zéro ou si elles vieillissent trop
 
-### Système d'évolution
+## Système d'évolution
 - Croisement génétique lors de la reproduction
 - Mutations aléatoires qui modifient les traits
 - Sélection naturelle (les mieux adaptés survivent plus longtemps)
 - Adaptation à l'environnement (les traits avantageux dans certains environnements sont favorisés)
 
-### Événements environnementaux
+## Événements environnementaux
 - Cycle jour/nuit qui affecte les conditions
 - Saisons qui modifient la température et l'humidité
 - Catastrophes naturelles (inondations, incendies, sécheresses)
 
-## Fonctionnement du cycle de simulation
+# Fonctionnement du cycle de simulation
 
 1. **Initialisation**:
    - Génération d'une carte du monde avec différents terrains
@@ -51,9 +49,9 @@ Cette simulation modélise un écosystème où des créatures autonomes évoluen
      - Analyse des statistiques d'évolution
      - Événements possibles comme catastrophes naturelles
 
-## Mécanismes d'évolution en détail
+# Mécanismes d'évolution en détail
 
-### Génome
+## Génome
 Le génome des créatures définit plusieurs types de traits:
 - **Traits physiques**: taille, vitesse, force, vision
 - **Traits de survie**: métabolisme, agressivité, taux de reproduction
@@ -61,14 +59,14 @@ Le génome des créatures définit plusieurs types de traits:
 - **Traits spéciaux**: capacité à nager, grimper
 - **Apparence**: couleur (RGB)
 
-### Reproduction
+## Reproduction
 Lorsque deux créatures se reproduisent:
 1. Les génomes des parents sont croisés (chaque trait a 50% de chance de venir de chaque parent)
 2. Des mutations peuvent survenir (certains traits sont modifiés aléatoirement)
 3. Les parents dépensent de l'énergie pour créer l'enfant
 4. Un cooldown de reproduction est appliqué aux parents
 
-### Adaptation
+## Adaptation
 - Les créatures avec des traits adaptés à leur environnement:
   - Trouvent plus facilement de la nourriture
   - Dépensent moins d'énergie pour se déplacer
@@ -78,7 +76,7 @@ Lorsque deux créatures se reproduisent:
   - Dépensent plus d'énergie
   - Meurent plus rapidement
 
-## Interface utilisateur et contrôles
+# Interface utilisateur et contrôles
 
 La simulation offre une interface utilisateur interactive permettant de:
 - Modifier le terrain (eau, désert, forêt, montagne)
@@ -87,7 +85,7 @@ La simulation offre une interface utilisateur interactive permettant de:
 - Mettre en pause, accélérer ou ralentir la simulation
 - Visualiser des statistiques sur l'évolution des espèces
 
-## Émergence de comportements complexes
+# Émergence de comportements complexes
 
 Avec le temps, on peut observer:
 - L'émergence d'espèces différentes adaptées à des niches écologiques spécifiques
