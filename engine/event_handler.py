@@ -74,13 +74,13 @@ class EventHandler:
             self.selected_terrain = "mountain"
             
         # Catastrophes naturelles
-        elif event.key == pygame.K_f1:
+        elif event.key == pygame.K_F1:
             # Déclencher une inondation
             self.trigger_disaster("flood")
-        elif event.key == pygame.K_f2:
+        elif event.key == pygame.K_F2:
             # Déclencher un incendie
             self.trigger_disaster("fire")
-        elif event.key == pygame.K_f3:
+        elif event.key == pygame.K_F3:
             # Déclencher une sécheresse
             self.trigger_disaster("drought")
     
