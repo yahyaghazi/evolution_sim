@@ -4,7 +4,7 @@ Une simulation interactive d'évolution de créatures virtuelles développée av
 
 ![Version](https://img.shields.io/badge/version-1.0.0-blue)
 ![Python](https://img.shields.io/badge/Python-3.6+-green)
-![License](https://img.shields.io/badge/license-MIT-orange)
+![License](https://img.shields.io/badge/license-Personal_Educational-blue)
 
 ## 📝 Description
 
@@ -132,4 +132,12 @@ Vous pouvez modifier les paramètres de la simulation dans le fichier `config.py
 
 ## 📜 Licence
 
-Ce projet est sous licence MIT. Voir le fichier `LICENSE` pour plus de détails.
+Ce projet est un projet personnel éducatif. En tant que tel :
+
+- Ce code est la propriété intellectuelle de l'auteur original
+- Vous êtes libre de cloner, utiliser et modifier ce projet à des fins d'apprentissage et éducatives
+- Vous êtes encouragé à expérimenter, améliorer et étendre les fonctionnalités dans un cadre pédagogique
+- Ce projet pourra être utilisé comme base pour des travaux académiques en groupe
+- Le code et la structure sont susceptibles de changer au fil du développement
+
+Si vous souhaitez contribuer ou utiliser ce projet dans un autre contexte, veuillez contacter l'auteur.
