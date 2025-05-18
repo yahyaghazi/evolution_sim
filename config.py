@@ -33,7 +33,7 @@ class Config:
     SELECTION_PRESSURE = 1.5  # Influence de la fitness sur la sélection
 
     # Paramètres de simulation
-    FOOD_SPAWN_RATE = 0.01    # Probabilité d'apparition de nourriture par cellule
+    FOOD_SPAWN_RATE = 0.003   # Probabilité d'apparition de nourriture par cellule
     DAY_LENGTH = 500          # Durée d'un jour en frames
 
     # Paramètres de l'interface

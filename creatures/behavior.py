@@ -9,13 +9,13 @@ class Behavior:
     Implémente les algorithmes de prise de décision et d'intelligence artificielle.
     """
     # Types de comportements
-    EXPLORING = "exploring"
-    HUNTING = "hunting"
-    FLEEING = "fleeing"
-    MATING = "mating"
-    RESTING = "resting"
-    MIGRATING = "migrating"
-    
+    EXPLORING = "exploring"  # Exploration des zones
+    HUNTING = "hunting"      # Chasse de la nourriture
+    FLEEING = "fleeing"      # Fuite face à un danger
+    MATING = "mating"        # Reproduction
+    RESTING = "resting"      # Repos pour récupérer de l'énergie
+    MIGRATING = "migrating"  # Migration vers un nouvel environnement
+
     def __init__(self):
         # Paramètres de comportement
         self.decision_interval = 10  # Intervalles entre les décisions (en frames)
@@ -28,8 +28,8 @@ class Behavior:
         """Initialise les tables de décision pour différents comportements."""
         # Table de prise de décision pour l'exploration
         self.exploration_weights = {
-            "random": 0.5,            # Tendance à se déplacer aléatoirement
-            "curiosity": 0.3,         # Tendance à explorer de nouveaux territoires
+            "random": 0.5,             # Tendance à se déplacer aléatoirement
+            "curiosity": 0.3,          # Tendance à explorer de nouveaux territoires
             "resource_attraction": 0.2 # Attraction vers les ressources visibles
         }
         

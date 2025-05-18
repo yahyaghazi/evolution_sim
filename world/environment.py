@@ -52,6 +52,9 @@ class Environment:
         
         # Appliquer les variations climatiques à la grille
         self.apply_environmental_conditions()
+
+        # Déclencher un cycle de pénurie de ressources
+        self.trigger_scarcity_cycle()
     
     def update_day_night_cycle(self):
         """Met à jour le cycle jour/nuit."""
@@ -370,3 +373,19 @@ class Environment:
             "active_weather_systems": len(self.weather_systems),
             "disaster_history": len(self.disaster_history)
         }
+    
+    def trigger_scarcity_cycle(self):
+        """Déclenche un cycle de pénurie de ressources."""
+        if np.random.random() < 0.005:  # 0.5% de chance par frame
+            # Réduire les ressources dans tout le monde
+            for x in range(self.grid.width):
+                for y in range(self.grid.height):
+                    cell = self.grid.get_cell(x, y)
+                    if cell:
+                        # Réduire la nourriture de 40-60%
+                        cell.food *= 0.4 + np.random.random() * 0.2
+                        # Réduire l'eau de 30-50%
+                        cell.water *= 0.5 + np.random.random() * 0.2
+            
+            # Journaliser l'événement
+            self.log_event("scarcity_cycle", "Période de pénurie des ressources déclenchée.")

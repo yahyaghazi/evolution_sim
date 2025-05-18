@@ -25,8 +25,8 @@ class Genome:
             "vision_range": np.random.randint(10, 90),  # Portée de vision
             
             # Traits de survie et comportementaux (0-100)
-            "metabolism": np.random.randint(10, 90),    # Vitesse de consommation d'énergie
-            "aggression": np.random.randint(10, 90),    # Tendance à l'agression
+            "metabolism": np.random.randint(10, 90),         # Vitesse de consommation d'énergie
+            "aggression": np.random.randint(10, 90),         # Tendance à l'agression
             "reproduction_rate": np.random.randint(10, 90),  # Fréquence de reproduction
             "social_tendency": np.random.randint(10, 90),    # Tendance à la socialisation
             
@@ -110,7 +110,7 @@ class Genome:
     def get_metabolic_rate(self):
         """Récupère le taux métabolique (consommation d'énergie)."""
         # Un métabolisme élevé consomme plus d'énergie
-        return 0.5 + (self.traits["metabolism"] / 100) * 1.5
+        return 0.8 + (self.traits["metabolism"] / 100) * 1.8
     
     def calculate_environmental_fitness(self, cell):
         """

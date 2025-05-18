@@ -38,11 +38,11 @@ class Grid:
                 # Distribution aléatoire pour cet exemple
                 rand_val = np.random.random()
                 
-                if rand_val < 0.2:
+                if rand_val < 0.25:
                     terrain_type = "water"
-                elif rand_val < 0.4:
+                elif rand_val < 0.55:
                     terrain_type = "desert"
-                elif rand_val < 0.8:
+                elif rand_val < 0.85:
                     terrain_type = "forest"
                 else:
                     terrain_type = "mountain"
@@ -77,6 +77,9 @@ class Grid:
         
         # Mise à jour du cycle jour/nuit
         self.update_day_night_cycle()
+
+        # Dégradation des ressources
+        self.degrade_resources()
     
     def update_resources(self):
         """Met à jour les ressources de chaque cellule."""
@@ -249,3 +252,16 @@ class Grid:
                 # Possibilité de transformer l'eau peu profonde en désert
                 if cell.terrain_type == "water" and np.random.random() < 0.2:
                     self.set_cell_type(x, y, "desert")
+
+    def degrade_resources(self):
+        """Dégrade périodiquement les ressources pour simuler l'épuisement naturel."""
+        # Appliquer tous les X frames (par exemple tous les 50 frames)
+        if self.frame_counter % 50 == 0:
+            for x in range(self.width):
+                for y in range(self.height):
+                    cell = self.cells[x, y]
+                    # Réduire la nourriture de 5-10%
+                    cell.food *= 0.9 + np.random.random() * 0.05
+                    # Réduire l'eau sauf dans les cellules d'eau
+                    if cell.terrain_type != "water":
+                        cell.water *= 0.9 + np.random.random() * 0.05

@@ -28,16 +28,16 @@ class Resources:
         # Capacité maximale de chaque ressource par type de terrain
         self.max_capacity = {
             "food": {
-                "water": 5,         # Capacité maximale dans l'eau
-                "desert": 2,        # Capacité maximale dans le désert
-                "forest": 10,       # Capacité maximale dans la forêt
-                "mountain": 3       # Capacité maximale dans les montagnes
+                "water": 2,         # Capacité maximale dans l'eau
+                "desert": 1,        # Capacité maximale dans le désert
+                "forest": 4,       # Capacité maximale dans la forêt
+                "mountain": 1       # Capacité maximale dans les montagnes
             },
             "water": {
-                "water": 10,        # Capacité maximale dans l'eau
-                "desert": 1,        # Capacité maximale dans le désert
-                "forest": 5,        # Capacité maximale dans la forêt
-                "mountain": 3       # Capacité maximale dans les montagnes
+                "water": 5,        # Capacité maximale dans l'eau
+                "desert": 0.5,        # Capacité maximale dans le désert
+                "forest": 2,        # Capacité maximale dans la forêt
+                "mountain": 1       # Capacité maximale dans les montagnes
             }
         }
         

@@ -200,7 +200,7 @@ class Creature:
             cell.food -= food_eaten
             
             # Gain d'énergie
-            self.energy += food_eaten * 10
+            self.energy += food_eaten * 5
             
             # Limiter l'énergie maximale
             self.energy = min(self.energy, 100)

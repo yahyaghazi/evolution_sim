@@ -51,9 +51,9 @@ class EventHandler:
         elif event.key == pygame.K_s:
             self.game_loop.step_simulation()
         elif event.key == pygame.K_PLUS or event.key == pygame.K_EQUALS:
-            self.game_loop.adjust_speed(0.25)
+            self.game_loop.adjust_speed(1)
         elif event.key == pygame.K_MINUS:
-            self.game_loop.adjust_speed(-0.25)
+            self.game_loop.adjust_speed(-1)
             
         # Sélection du mode d'édition
         elif event.key == pygame.K_1:
