@@ -1,6 +1,6 @@
 # Licence personnelle pour projet éducatif
 
-Copyright (c) 2025 [Votre Nom]
+Copyright © 2025 Yahya Ghazi
 
 ## Autorisation d'utilisation
 
@@ -25,4 +25,4 @@ Ce projet est un projet personnel à vocation éducative. En tant que tel :
    - Cette licence et les conditions d'utilisation du projet sont susceptibles d'évoluer
    - Les modifications futures du projet pourront inclure des changements significatifs de structure et de fonctionnalités
 
-Pour toute question concernant l'utilisation de ce projet au-delà du cadre défini ci-dessus, veuillez contacter l'auteur.
+Pour toute question concernant l'utilisation de ce projet au-delà du cadre défini ci-dessus, veuillez contacter l'auteur sur yahya.ghazi2004@gmail.com.
